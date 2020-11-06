@@ -1,0 +1,42 @@
+.movie {
+    min-width: 400px;
+    height: 600px;
+    overflow:hidden;
+    position: absolute;
+    left: calc(350px * var(--i));
+    box-shadow: 10px 10px 10px 10px var(--black);
+    margin: 0 20px;
+}
+
+.movie:hover {
+    z-index: 90;
+    box-shadow: 0 0 10px 0;
+    min-width: 400px;
+    height: 700px;
+    margin: 0 10px;
+}
+
+.movie-data.show {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    span {
+        font-weight: bolder;
+    }
+}
+
+.stars {
+    display: inline-block;
+    font-size: 2em;
+    max-width: calc(75px * (var(--rating) / 100));
+    overflow: hidden;
+}

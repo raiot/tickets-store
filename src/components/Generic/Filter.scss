@@ -1,0 +1,26 @@
+.filter {
+    h2 {
+        margin: 0 10px;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        font-size: 2em;
+        color: var(--yellow);
+    }
+
+    a:active {
+        border: none;
+    }
+
+    a.selected ~ a {
+        color: var(--black);
+    }
+
+    a:hover ~ a{
+        color: var(--black);
+    }
+}

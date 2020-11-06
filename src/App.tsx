@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { Store, useStore }from './store';
+import Discovery from './components/Discovery/Discovery';
+import Loading from './components/Generic/Loading';
+import Header from './components/Generic/Header';
+import Filter from './components/Generic/Filter';
+import './App.scss';
 
 function App() {
+  const { state } = useStore();
+  console.log(state);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Store>
+      <div className="page">
+        <Header />
+        <Filter />
+        <Suspense fallback={Loading}>
+          <Discovery />
+        </Suspense>
+      </div>
+    </Store>
   );
 }
 

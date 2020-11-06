@@ -1,5 +1,15 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --site-blue: rgb(213, 61, 84);
+  --site-green: rgb(156, 199, 69);
+  --site-green-active: rgb(99, 167, 50);
+  --yellow: rgb(213, 207, 37);
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
